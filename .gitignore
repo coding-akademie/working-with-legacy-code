@@ -1,0 +1,42 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.apt_generated_tests/
+sonarlint.json
+bin/
+
+# Visual source code
+.vscode/
+.history/
+# default directory for plantuml in vscode
+out
+
+# netbeans
+nb-configuration.xml
+nbactions.xml
+nbactions-*.xml
+nbproject/
+
+# Intellij
+/.idea/*
+*.iml
+.idea
+
+# Maven
+target/
+*.versionsBackup
+
+# temp
+~$*.pptx
+
+# Mac
+.DS_Store
+
+# generated
+timetable.csv
+
+# internal task list
+*.todo
