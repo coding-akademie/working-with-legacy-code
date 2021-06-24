@@ -14,18 +14,19 @@ public class BuildSeamsInto {
 
     private void main() throws IOException {
         System.out.println("Hello User");
-
         URL url = new URL("https://www.timeanddate.com/");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
+
         con.setRequestMethod("GET");
         con.setDoOutput(true);
 
         DataOutputStream out = new DataOutputStream(con.getOutputStream());
         out.flush();
+        String inputLine;
         out.close();
 
+        final String searchFor = "<span id=\"clk_hm\">";
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-        String inputLine;
         StringBuffer content = new StringBuffer();
         while ((inputLine = in.readLine()) != null) {
             content.append(inputLine);
@@ -33,7 +34,6 @@ public class BuildSeamsInto {
         in.close();
         con.disconnect();
 
-        final String searchFor = "<span id=\"clk_hm\">";
         int pos = content.indexOf(searchFor);
         System.out.println(content.substring(pos + searchFor.length(), pos + searchFor.length() + 5));
         System.out.println("Bye");
