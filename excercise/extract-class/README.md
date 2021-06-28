@@ -1,4 +1,5 @@
-# Golden-Master with Seam
+# Extract Class
 
 Your task:
-* create a golden master from BuildSeamsInto's System.out.println AND network communication
+* What are concepts and are those properly layed out in the code?
+* Are the unnecassary details? Can you refactor them into reuseable code?
